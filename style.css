@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tilt Neon', sans-serif;;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+body {
+    background: linear-gradient(to right, #04043b, rgb(17, 16, 16));
+    color: white;
+}
+
+.grid-container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows:minmax(100px, auto) repeat(6, 100px);
+    gap: 8px;
+}
+
+.output {
+    grid-column: 1/5;
+    border: 2px solid #00FFFF;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    padding: 0px 10px 0px 10px;
+    box-shadow: inset #00FFFF -2px -2px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    word-wrap: break-word;
+    word-break: break-all;
+    align-items: flex-end;
+    min-height: 100px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.equal-btn {
+    grid-column: 3/5;
+}
+
+.clear-btn {
+    grid-column: 1/3;
+}
+
+.number-btn {
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    border-radius: 15px;
+    box-shadow: inset white -2px -2px 10px;
+}
+
+.number-btn:hover {
+    background-color:white;
+    color: black;
+    transition: .4s;
+}
+
+.clear-btn, .del-btn {
+    border: 2px solid rgb(156, 156, 4);
+    color: rgb(156, 156, 4);
+    background-color: transparent;
+    border-radius: 15px;
+    box-shadow: inset rgb(156, 156, 4) -2px -2px 10px;
+}
+
+.clear-btn:hover, .del-btn:hover {
+    background-color: rgb(156, 156, 4);
+    color: white;
+    transition: .3s;
+}
+
+.operator-btn, .double-span {
+    border: 2px solid purple;
+    color: purple;
+    background-color: transparent;
+    border-radius: 15px;
+    box-shadow: inset purple -2px -2px 10px;
+}
+
+.operator-btn:hover, .double-span:hover {
+    background-color:purple;
+    color: white;
+    transition: .3s;
+}
+
+.equal-btn {
+    border: 1px solid green;
+    box-shadow: inset green -2px -2px 10px;
+    background-color: transparent;
+    color: green;
+    border-radius: 15px;
+}
+
+.equal-btn:hover {
+    background-color: green;
+    color: white;
+    transition: .3s;
+}
+
+@media (max-width: 485px) {
+    .grid-container {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        min-height: 100vh;
+        grid-template-columns: repeat(4, 60px);
+        grid-template-rows:minmax(60px, auto) repeat(6, 60px);
+        gap: 8px;
+    }
+
+    .output {
+        padding: 10px;
+    }
+}
